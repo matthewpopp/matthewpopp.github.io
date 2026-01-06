@@ -2,9 +2,18 @@
     <H1 class="text-6xl">Technical Project Portfolio</H1>
     <div class="flex flex-col items-end">
         <H2 class="text-4xl">Matthew Popp</H2>
-        <a href="https://www.linkedin.com/in/matthew-popp/">
-            <p-button text label="LinkedIn"  iconPos="right" icon="pi pi-linkedin"  severity="info"/>
-        </a>
+
+        <div class="flex flex=row">
+            <p-button text label="Resume" (click)="resumeVisible.set(true)" icon="pi pi-file" iconPos="right" severity="info"/>
+
+            <a href="https://www.linkedin.com/in/matthew-popp/">
+                <p-button text label="LinkedIn"  iconPos="right" icon="pi pi-linkedin"  severity="info"/>
+            </a>
+        </div>
     </div>
 </div>
 
+<p-drawer styleClass="!w-full xl:!w-[80rem]" [(visible)]="resumeVisible" position="right">
+        <app-resume/>
+</p-drawer>
+    
