@@ -1,3 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+body {
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+
+
+@media (min-width: 1000px) {
+    body {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
