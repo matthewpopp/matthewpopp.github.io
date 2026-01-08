@@ -17,19 +17,9 @@ export class Header {
     const isMobile = window.innerWidth < 760;
     
     if (isMobile) {
-      this.downloadResume();
+      window.open(this.resumeUrl, '_blank');
     } else {
       this.resumeVisible.set(true);
     }
-  }
-
-
-  private downloadResume() {
-    const link = document.createElement('a');
-    link.href = this.resumeUrl;
-    link.download = 'PoppResume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   }
 }
