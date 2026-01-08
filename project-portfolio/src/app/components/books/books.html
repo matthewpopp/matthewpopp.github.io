@@ -1,0 +1,31 @@
+<p-accordion value="0">
+    <p-accordion-panel value="0">
+    <p-accordion-header class="text-3xl!">In Progress</p-accordion-header>
+    <p-accordion-content>
+        <ng-container [ngTemplateOutlet]="bookTable" [ngTemplateOutletContext]="{books: inProgessBooks}"></ng-container>
+    </p-accordion-content>
+    </p-accordion-panel>
+
+    <p-accordion-panel value="1">
+        <p-accordion-header class="text-3xl!">Finished</p-accordion-header>
+        <p-accordion-content>
+            <ng-container [ngTemplateOutlet]="bookTable" [ngTemplateOutletContext]="{books: finishedBooks}"></ng-container>
+        </p-accordion-content>
+    </p-accordion-panel>
+</p-accordion>
+
+<ng-template #bookTable let-books="books">
+    <p-table [value]="books">
+        <ng-template #body let-book>
+            <tr>
+                <td>
+                    <img class="h-80! object-cover block m-auto" [src]="book.imageurl" alt="{{ book.title }}" />
+                </td>
+                <td>
+                    <div class="text-3xl font-bold">{{ book.title }}</div>
+                    <div>{{ book.author }}</div>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</ng-template>

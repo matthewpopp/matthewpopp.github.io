@@ -7,10 +7,8 @@ body {
     padding-top: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: 2rem;
 }
-
-
-
 
 @media (min-width: 1000px) {
     body {
