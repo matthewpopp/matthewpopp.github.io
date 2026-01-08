@@ -10,5 +10,26 @@ import { Resume } from '../resume/resume';
   templateUrl: './header.html',
 })
 export class Header {
-  protected resumeVisible = signal(false);
+  protected readonly resumeVisible = signal(false);
+  protected readonly resumeUrl = 'assets/PoppResume.pdf';
+
+  handleResumeToggle() {
+    const isMobile = window.innerWidth < 760;
+    
+    if (isMobile) {
+      this.downloadResume();
+    } else {
+      this.resumeVisible.set(true);
+    }
+  }
+
+
+  private downloadResume() {
+    const link = document.createElement('a');
+    link.href = this.resumeUrl;
+    link.download = 'PoppResume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 }
