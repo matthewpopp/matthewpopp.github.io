@@ -26,21 +26,41 @@
             <span class="text-lg font-bold">Images</span>
           </span>
         </p-accordion-header>
-        <p-accordion-content>
+        <p-accordion-content class="flex flex-row justify-center bg-(--p-chip-background)">
           @if (activePanel() == 1) {
-            <p-galleria
-              [value]="images()"
-              [responsiveOptions]="responsiveOptions"
-              [containerStyle]="{ 'max-width': '640px' }"
-              [numVisible]="5"
-            >
-              <ng-template #item let-item>
-                <img [src]="item.itemImageSrc" style="width: 100%" />
-              </ng-template>
-              <ng-template #thumbnail let-item>
-                <img [src]="item.thumbnailImageSrc" />
-              </ng-template>
-            </p-galleria>
+            <div class="w-full flex justify-center">
+              <p-galleria
+                [value]="images()"
+                [responsiveOptions]="responsiveOptions"
+                [containerStyle]="{ 'max-width': '1000px' }"
+                [showThumbnails]="!isMobile"
+                [showIndicators]="isMobile"
+                [thumbnailsPosition]="isMobile ? 'bottom' : 'right'"
+                styleClass="w-full max-w-5xl mx-auto"
+              >
+                <ng-template #item let-item>
+                  <div class="flex justify-center items-center w-full relative">
+                    <img
+                      [src]="item.itemImageSrc"
+                      alt="gallery image"
+                      class="max-w-full max-h-[60vh] md:max-h-160 object-contain block"
+                    />
+                  </div>
+                </ng-template>
+
+                <ng-template #thumbnail let-item>
+                  <div
+                    class="overflow-hidden flex items-center justify-center w-20 h-16 md:w-32 md:h-24"
+                  >
+                    <img
+                      [src]="item.thumbnailImageSrc"
+                      alt="thumbnail"
+                      class="w-full h-full object-cover block"
+                    />
+                  </div>
+                </ng-template>
+              </p-galleria>
+            </div>
           }
         </p-accordion-content>
       </p-accordion-panel>

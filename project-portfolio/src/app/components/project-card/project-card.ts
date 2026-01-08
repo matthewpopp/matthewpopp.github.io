@@ -1,4 +1,4 @@
-import { Component, input, contentChild, TemplateRef, computed, signal } from '@angular/core';
+import { Component, input, contentChild, TemplateRef, computed, signal, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CardModule } from 'primeng/card';
@@ -10,13 +10,30 @@ import { AccordionModule } from 'primeng/accordion';
   selector: 'app-project-card',
   imports: [CardModule, GalleriaModule, CommonModule, ButtonModule, AccordionModule],
   templateUrl: './project-card.html',
+  styleUrl: './project-card.css',
 })
-export class ProjectCard {
+export class ProjectCard implements OnInit {
   title = input.required<string>();
   imageUrls = input<string[]>([]);
 
   tagsTemplate = contentChild<TemplateRef<any>>('tags');
   bodyTemplate = contentChild<TemplateRef<any>>('body');
+
+  isMobile: boolean = false;
+  private readonly mobileBreakpoint = 768;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenSize();
+  }
+
+  ngOnInit() {
+    this.checkScreenSize();
+  }
+
+  private checkScreenSize() {
+    this.isMobile = window.innerWidth < this.mobileBreakpoint;
+  }
 
   images = computed(() => {
     if (!this.imageUrls().length) return [];
