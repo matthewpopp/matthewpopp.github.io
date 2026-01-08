@@ -1,166 +1,247 @@
 <div class="flex flex-col gap-8">
-<div>
+  <div>
     <H2 class="text-3xl lg:text-5xl mb-3">Analytics & Data Projects</H2>
     <div class="flex flex-col gap-4">
-        <app-project-card title="MSBA Analytics Challenge" [imageUrls]="projectImages.msbaChallenge">
-            <ng-template #tags>
-                <p-chip label="Excel" [image]="icons.excel" />
-                <p-chip label="Python" [image]="icons.python" />
-                <p-chip label="Tableau" [image]="icons.tableau" />
-            </ng-template>
+      <app-project-card title="MSBA Analytics Challenge" [imageUrls]="projectImages.msbaChallenge">
+        <ng-template #tags>
+          <p-chip label="Excel" [image]="icons.excel" />
+          <p-chip label="Python" [image]="icons.python" />
+          <p-chip label="Tableau" [image]="icons.tableau" />
+        </ng-template>
 
-            <ng-template #body>
-                <p>During my time in the Wisconsin School of Business Master's in Business Analytics program, I had the opportunity to participate in a team analytics challenge. In this project, I worked with
-                two peers to analyze a dataset on hospital readmission and patient demographics.</p>
+        <ng-template #body>
+          <p>
+            During my time in the Wisconsin School of Business Master's in Business Analytics
+            program, I had the opportunity to participate in a team analytics challenge. In this
+            project, I worked with two peers to analyze a dataset on hospital readmission and
+            patient demographics.
+          </p>
 
-                 <p>We were given 90 minutes to complete this task, and we had to prepare a 2.5 minute presentation with our findings to show at the end.</p>
+          <p>
+            We were given 90 minutes to complete this task, and we had to prepare a 2.5 minute
+            presentation with our findings to show at the end.
+          </p>
 
-                 <p>This was a fun project because we had to work together and make compromises in order to extract the best findings and recommendations within the limited timeframe. I often strive for perfection 
-                on projects, but I found this experience to be good practice for doing the best possible work in a timebox then moving on, which is often required to in real-world scenarios.</p>
-            </ng-template>
-        </app-project-card>
+          <p>
+            This was a fun project because we had to work together and make compromises in order to
+            extract the best findings and recommendations within the limited timeframe. I often
+            strive for perfection on projects, but I found this experience to be good practice for
+            doing the best possible work in a timebox then moving on, which is often required to in
+            real-world scenarios.
+          </p>
+        </ng-template>
+      </app-project-card>
 
-        <app-project-card title="Energy Pricing Dashboard" [imageUrls]="projectImages.energyDashboard">
-            <ng-template #tags>
-                <p-chip label="Excel" [image]="icons.excel" />
-            </ng-template>
+      <app-project-card
+        title="Energy Pricing Dashboard"
+        [imageUrls]="projectImages.energyDashboard"
+      >
+        <ng-template #tags>
+          <p-chip label="Excel" [image]="icons.excel" />
+        </ng-template>
 
-            <ng-template #body>
-                <p>For an honors project in an undergraduate Information Systems course, I created a dashboard in Excel to visualize residential, commercial, and industrial energy pricing across the United States.
-                This project used 2020 data from the U.S. Department of Energy and leveraged pivot tables, slicers, data validation, and VBA macros.</p>
-               
-                <p>I enjoyed creating this dashboard because it allowed me to utilize geographic tools and combine different features. I also used this project as an opportunity to learn some Visual Basic
-                for Macros, which I found was a powerful way to add interactive features to the dashboard.</p>
-            </ng-template>
-        </app-project-card>
+        <ng-template #body>
+          <p>
+            For an honors project in an undergraduate Information Systems course, I created a
+            dashboard in Excel to visualize residential, commercial, and industrial energy pricing
+            across the United States. This project used 2020 data from the U.S. Department of Energy
+            and leveraged pivot tables, slicers, data validation, and VBA macros.
+          </p>
 
-        <app-project-card title="MSBA Immersion Trip Projects" [imageUrls]="projectImages.msbaImmersions">
-            <ng-template #tags>
-                <p-chip label="Excel" [image]="icons.excel" />
-                <p-chip label="Python" [image]="icons.python" />
-                <p-chip label="Tableau" [image]="icons.tableau" />
-            </ng-template>
+          <p>
+            I enjoyed creating this dashboard because it allowed me to utilize geographic tools and
+            combine different features. I also used this project as an opportunity to learn some
+            Visual Basic for Macros, which I found was a powerful way to add interactive features to
+            the dashboard.
+          </p>
+        </ng-template>
+      </app-project-card>
 
-            <ng-template #body>
-                <p>During my time in the Wisconsin School of Business Master's in Business Analytics program, I had the opportunity to visit Molson Coors Beverage Company and
-                Second Harvest Food Bank of Southern Wisconsin for career immersions with other students. During both of these trips, I worked with peers on analytics challenges
-                to explore real problems and questions the organizations were facing, and present finding to stakeholders.</p>
-               
-                <p>At a high level, these projects involved exploratory data analysis, market and industry research, and creating professional visualizations and presentations in a
-                very limited timeframe. I enjoyed these projects since they involved lots of collaboration and because of their potential to impact decisions at real businesses.</p>
-            </ng-template>
-        </app-project-card>
+      <app-project-card
+        title="MSBA Immersion Trip Projects"
+        [imageUrls]="projectImages.msbaImmersions"
+      >
+        <ng-template #tags>
+          <p-chip label="Excel" [image]="icons.excel" />
+          <p-chip label="Python" [image]="icons.python" />
+          <p-chip label="Tableau" [image]="icons.tableau" />
+        </ng-template>
 
-        <app-project-card title="AWS Data Pipeline and ML Integration" [imageUrls]="projectImages.awsPipeline">
-            <ng-template #tags>
-                <p-chip label="AWS" [image]="icons.aws" />
-            </ng-template>
+        <ng-template #body>
+          <p>
+            During my time in the Wisconsin School of Business Master's in Business Analytics
+            program, I had the opportunity to visit Molson Coors Beverage Company and Second Harvest
+            Food Bank of Southern Wisconsin for career immersions with other students. During both
+            of these trips, I worked with peers on analytics challenges to explore real problems and
+            questions the organizations were facing, and present finding to stakeholders.
+          </p>
 
-            <ng-template #body>
-                <p>For a final project in a graduate cloud technologies course, I created a data pipeline using various AWS services. Raw financial data from S3 buckets was transformed and loaded into
-                a Redshift data warehouse using AWS Glue. From there AWS SageMaker AI was used to build a model that predicted future bankruptcy status based on training data from
-                the data warehouse. </p>
-                
-                <p>As a final deliverable, I created a presentation for prospective stakeholders that conveyed the architecture, findings, and recommendations in an understandable way
-                for non-technical audiences.</p>
-            </ng-template>
-        </app-project-card>
-        <!--TODO: Add 730 final project-->
+          <p>
+            At a high level, these projects involved exploratory data analysis, market and industry
+            research, and creating professional visualizations and presentations in a very limited
+            timeframe. I enjoyed these projects since they involved lots of collaboration and
+            because of their potential to impact decisions at real businesses.
+          </p>
+        </ng-template>
+      </app-project-card>
+
+      <app-project-card
+        title="AWS Data Pipeline and ML Integration"
+        [imageUrls]="projectImages.awsPipeline"
+      >
+        <ng-template #tags>
+          <p-chip label="AWS" [image]="icons.aws" />
+        </ng-template>
+
+        <ng-template #body>
+          <p>
+            For a final project in a graduate cloud technologies course, I created a data pipeline
+            using various AWS services. Raw financial data from S3 buckets was transformed and
+            loaded into a Redshift data warehouse using AWS Glue. From there AWS SageMaker AI was
+            used to build a model that predicted future bankruptcy status based on training data
+            from the data warehouse.
+          </p>
+
+          <p>
+            As a final deliverable, I created a presentation for prospective stakeholders that
+            conveyed the architecture, findings, and recommendations in an understandable way for
+            non-technical audiences.
+          </p>
+        </ng-template>
+      </app-project-card>
+      <!--TODO: Add 730 final project-->
     </div>
-</div>
+  </div>
 
-<div>
+  <div>
     <H2 class="text-3xl lg:text-5xl mb-3">Development Projects</H2>
     <div class="flex flex-col gap-4">
+      <app-project-card title="Interactive Warehouse Map" [imageUrls]="projectImages.warehouseMap">
+        <ng-template #tags>
+          <p-chip label="Angular" [image]="icons.angular" />
+          <p-chip label="SAP" [image]="icons.sap" />
+          <p-chip label="Python" [image]="icons.python" />
+          <p-chip label="SQL Server" [image]="icons.sqlServer" />
+        </ng-template>
 
-         <app-project-card title="Interactive Warehouse Map" [imageUrls]="projectImages.warehouseMap">
-            <ng-template #tags>
-                <p-chip label="Angular" [image]="icons.angular" />
-                <p-chip label="SAP" [image]="icons.sap" />
-                <p-chip label="Python" [image]="icons.python" />
-                <p-chip label="SQL Server" [image]="icons.sqlServer" />
-            </ng-template>
+        <ng-template #body>
+          <p>
+            I created this project as a proof-of-concept for a user-friendly interface for an SAP
+            warehouse management system. The main goal was to provide a representative warehouse map
+            and the ability for any user to see accurate inventory levels for every storage bin in
+            the warehouse. I used Blender to build a high-level template for the physical warehouse
+            layout, and the Blender API and Python scripting was used to connect to SAP and
+            transform the template into a detailed model based on the ERP data.
+          </p>
 
-            <ng-template #body>
-                 <p>I created this project as a proof-of-concept for a user-friendly interface for an SAP warehouse management system. The main goal was to provide a representative warehouse map and
-                the ability for any user to see accurate inventory levels for every storage bin in the warehouse. I used Blender to build a high-level template for the physical warehouse layout,
-                and the Blender API and Python scripting was used to connect to SAP and transform the template into a detailed model based on the ERP data.</p>
+          <p>
+            Once the 3D model was built, it was integrated into an existing Angular web application
+            using ThreeJS, and other API connections were implemented to connect live inventory
+            data.
+          </p>
 
-                <p>Once the 3D model was built, it was integrated into an existing Angular web application using ThreeJS, and other API connections were implemented to connect live inventory data.</p>
+          <p>
+            This is one of my favorite projects since I was able to integrate various applications
+            and systems seamlessly in order to make time consuming tasks more intuitive, especially
+            for newer employees. This project also inspired further warehouse planning and
+            optimization efforts at the company, which improved overall efficiency in the long run.
+          </p>
+        </ng-template>
+      </app-project-card>
 
-                <p>This is one of my favorite projects since I was able to integrate various applications and systems seamlessly in order to make time consuming tasks more intuitive, especially for
-                newer employees. This project also inspired further warehouse planning and optimization efforts at the company, which improved overall efficiency in the long run.</p>
-            </ng-template>
-        </app-project-card>
+      <app-project-card title="Online Storefront" [imageUrls]="projectImages.storefront">
+        <ng-template #tags>
+          <p-chip label="AWS" [image]="icons.aws" />
+          <p-chip label="mongoDB" [image]="icons.mongodb" />
+          <p-chip label="MySQL" [image]="icons.mysql" />
+          <p-chip label="Angular" [image]="icons.angular" />
+        </ng-template>
 
-         <app-project-card title="Online Storefront" [imageUrls]="projectImages.storefront">
-            <ng-template #tags>
-                <p-chip label="AWS" [image]="icons.aws" />
-                <p-chip label="mongoDB" [image]="icons.mongodb" />
-                <p-chip label="MySQL" [image]="icons.mysql" />
-                <p-chip label="Angular" [image]="icons.angular" />
-            </ng-template>
+        <ng-template #body>
+          <p>
+            For this project, I worked with a team to create an online storefront for a capstone
+            project in an IT project management course. I was primarily responsible for creating the
+            user interface and API endpoints. The project was fully hosted in AWS and used various
+            services including API Gateway, Lambda functions, EC2, Cognito, and Simple Email
+            Service. Some features included user account creation, carts and a checkout process with
+            order validation, and email notifications.
+          </p>
 
-            <ng-template #body>
-                <p>For this project, I worked with a team to create an online storefront for a capstone project in an IT project management course. I was primarily responsible for creating the user interface
-                and API endpoints. The project was fully hosted in AWS and used various services including API Gateway, Lambda functions, EC2, Cognito, and Simple Email Service. Some features included user
-                account creation, carts and a checkout process with order validation, and email notifications.</p>
+          <p>
+            This project allowed me to learn about integrations between different AWS services, as
+            well as CI/CD and best practices in AWS. It was also my first time working with MongoDB
+            which we used to manage user carts, and I found it to be a powerful tool in specific
+            scenarios.
+          </p>
+        </ng-template>
+      </app-project-card>
 
-                <p>This project allowed me to learn about integrations between different AWS services, as well as CI/CD and best practices in AWS. It was also my first time working with MongoDB which we used
-                    to manage user carts, and I found it to be a powerful tool in specific scenarios. 
-                </p>
-            </ng-template>
-        </app-project-card>
+      <app-project-card title="Project Portfolio">
+        <ng-template #tags>
+          <p-chip label="Github" [image]="icons.github" />
+          <p-chip label="Angular" [image]="icons.angular" />
+        </ng-template>
 
-        <app-project-card title="Project Portfolio">
-            <ng-template #tags>
-                <p-chip label="Github" [image]="icons.github" />
-                <p-chip label="Angular" [image]="icons.angular" />
-            </ng-template>
-
-            <ng-template #body>
-                The portfolio page that you are viewing right now is a simple web app that I built using Angular 21 with PrimeNG components and TailwindCSS.
-                It is being hosted on GitHub pages, and has an automated build and deployment process configured with GitHub actions. 
-            </ng-template>
-        </app-project-card>
+        <ng-template #body>
+          The portfolio page that you are viewing right now is a simple web app that I built using
+          Angular 21 with PrimeNG components and TailwindCSS. It is being hosted on GitHub pages,
+          and has an automated build and deployment process configured with GitHub actions.
+        </ng-template>
+      </app-project-card>
     </div>
-</div>
+  </div>
 
+  <div>
+    <H2 class="text-3xl lg:text-5xl mb-3">Activities</H2>
+    <div class="flex flex-col gap-4">
+      <app-project-card title="Books">
+        <ng-template #body>
+          <p>
+            In my free time, I enjoy reading technical books on topics that are relevant to the work
+            I enjoy including software development, data processing and analysis, and process
+            optimization. I tend to prefer having paper copies of the books I read since I spend a
+            lot of time looking at screens as it is, and I enjoy having a physical reference that
+            can never be updated without my knowledge. I keep a growing list of titles that I would
+            like to read, and I am always on the lookout for new things to add to it!
+          </p>
 
-    <div>
-        <H2 class="text-3xl lg:text-5xl mb-3">Activities</H2>
-        <div class="flex flex-col gap-4">
-            <app-project-card title="Books">
-                <ng-template #body>
-                    <p>In my free time, I enjoy reading technical books on topics that are relevant to the work I enjoy including software development, data processing and analysis, and process optimization. I tend to prefer having paper
-                    copies of the books I read since I spend a lot of time looking at screens as it is, and I enjoy having a physical reference that can never be updated without my knowledge. I keep a growing list of titles that I would
-                    like to read, and I am always on the lookout for new things to add to it!</p>
+          <p>
+            I have put together a list of technical books that I have read so far outside of
+            academic settings, which includes a few short thoughts and takeaways that I have from
+            each of them. You can see it
+            <p-button styleClass="p-0 pr-1 pl-1" text (click)="booksVisible.set(true)"
+              ><span class="text-xl font-bold">here</span></p-button
+            >!
+          </p>
+        </ng-template>
+      </app-project-card>
 
-                    <p>I have put together a list of technical books that I have read so far outside of academic settings, which includes a few short thoughts and takeaways that I have from each of them. You can see it
-                        <p-button styleClass="p-0 pr-1 pl-1" text (click)="booksVisible.set(true)"><span class="text-xl font-bold">here</span></p-button>!</p>
-                </ng-template>
-            </app-project-card>
+      <app-project-card title="Woodworking" [imageUrls]="projectImages.woodworking">
+        <ng-template #body>
+          <p>
+            In my free time I also enjoy woodworking since it allows me to be creative and make
+            things with my hands, while also requiring planning and precision. I tend to make things
+            that fulfill needs that I have so they are usually more on the functional side. I have
+            added photos of a few of my more recent projects which include a bedside drawer and
+            table, an entertainment center, and a pair of dog bowl stands that I made for my sister.
+          </p>
+        </ng-template>
+      </app-project-card>
 
-            <app-project-card title="Woodworking" [imageUrls]="projectImages.woodworking">
-                <ng-template #body>
-                    <p>In my free time I also enjoy woodworking since it allows me to be creative and make things with my hands, while also requiring planning and precision. I tend to make things that fulfill needs that I have so they are
-                        usually more on the functional side. I have added photos of a few of my more recent projects which include a bedside drawer and table, an entertainment center, and a pair of dog bowl stands that I made for my sister.</p>
-                </ng-template>
-            </app-project-card>
-
-            <app-project-card title="Other Hobbies">
-                <ng-template #body>
-                    <p>
-                        When I get additional free time, I enjoy spending time outdoors hiking and on the lake during the warmer seasons. I have two golden retrievers so I do my best to keep them out and active, and I also enjoy listening to music.
-                        Some of my go-to genres are alternative pop, rock, and R&B, but I am always listening to new things.
-                    </p>
-                </ng-template>
-            </app-project-card>
-        </div>
+      <app-project-card title="Other Hobbies">
+        <ng-template #body>
+          <p>
+            When I get additional free time, I enjoy spending time outdoors hiking and on the lake
+            during the warmer seasons. I have two golden retrievers so I do my best to keep them out
+            and active, and I also enjoy listening to music. Some of my go-to genres are alternative
+            pop, rock, and R&B, but I am always listening to new things.
+          </p>
+        </ng-template>
+      </app-project-card>
     </div>
+  </div>
 </div>
-
 
 <p-drawer styleClass="!w-full xl:!w-[80rem]" [(visible)]="booksVisible" position="right">
-    <app-books />
+  <app-books />
 </p-drawer>

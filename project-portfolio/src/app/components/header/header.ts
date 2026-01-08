@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 
 import { ButtonModule } from 'primeng/button';
 import { DrawerModule } from 'primeng/drawer';
-import { Resume } from "../resume/resume";
+import { Resume } from '../resume/resume';
 
 @Component({
   selector: 'app-header',

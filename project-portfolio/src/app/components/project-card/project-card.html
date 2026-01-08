@@ -1,47 +1,49 @@
 <p-card>
-    <div class="flex justify-between mb-2">
-        <div class="text-2xl font-bold">{{title()}}</div>
-        <div class="flex flex-wrap flex-row gap-1">
-            <ng-container class="" *ngTemplateOutlet="tagsTemplate()" />
-        </div>
+  <div class="flex justify-between mb-2">
+    <div class="text-2xl font-bold">{{ title() }}</div>
+    <div class="flex flex-wrap flex-row gap-1">
+      <ng-container class="" *ngTemplateOutlet="tagsTemplate()" />
     </div>
-    
-    <p class="m-0 pl-10 pr-20 text-lg flex flex-col gap-3">
-        <ng-container *ngTemplateOutlet="bodyTemplate()" />
-    </p>
+  </div>
 
-    @if (images().length > 0) {
-        <p-accordion [value]="activePanel()" (valueChange)="activePanel.set($event)">
-            <p-accordion-panel class="mt-4 border-none" value="1">
-                <p-accordion-header class="pt-1 pb-1 bg-(--p-chip-background)">
-                    <ng-template #toggleicon let-active="active">
-                        @if (active) {
-                            <i class="pi pi-minus"></i>
-                        } @else {
-                            <i class="pi pi-plus"></i>
-                        }
-                    </ng-template>
-                    <span class="flex flex-row gap-3 items-center">
-                        <i class="pi pi-image"></i>
-                        <span class="text-lg font-bold">Images</span>
-                    </span>
-                
-                </p-accordion-header>
-                <p-accordion-content>
+  <p class="m-0 pl-10 pr-20 text-lg flex flex-col gap-3">
+    <ng-container *ngTemplateOutlet="bodyTemplate()" />
+  </p>
 
-                    @if (activePanel()==1) {
-                        <p-galleria [value]="images()" [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '640px' }" [numVisible]="5">
-                            <ng-template #item let-item>
-                                <img [src]="item.itemImageSrc" style="width:100%" />
-                            </ng-template>
-                            <ng-template #thumbnail let-item>
-                                <img [src]="item.thumbnailImageSrc" />
-                            </ng-template>
-                        </p-galleria>
-                    }
-                </p-accordion-content>
-            </p-accordion-panel>
-         </p-accordion>
-        }
-
+  @if (images().length > 0) {
+    <p-accordion [value]="activePanel()" (valueChange)="activePanel.set($event)">
+      <p-accordion-panel class="mt-4 border-none" value="1">
+        <p-accordion-header class="pt-1 pb-1 bg-(--p-chip-background)">
+          <ng-template #toggleicon let-active="active">
+            @if (active) {
+              <i class="pi pi-minus"></i>
+            } @else {
+              <i class="pi pi-plus"></i>
+            }
+          </ng-template>
+          <span class="flex flex-row gap-3 items-center">
+            <i class="pi pi-image"></i>
+            <span class="text-lg font-bold">Images</span>
+          </span>
+        </p-accordion-header>
+        <p-accordion-content>
+          @if (activePanel() == 1) {
+            <p-galleria
+              [value]="images()"
+              [responsiveOptions]="responsiveOptions"
+              [containerStyle]="{ 'max-width': '640px' }"
+              [numVisible]="5"
+            >
+              <ng-template #item let-item>
+                <img [src]="item.itemImageSrc" style="width: 100%" />
+              </ng-template>
+              <ng-template #thumbnail let-item>
+                <img [src]="item.thumbnailImageSrc" />
+              </ng-template>
+            </p-galleria>
+          }
+        </p-accordion-content>
+      </p-accordion-panel>
+    </p-accordion>
+  }
 </p-card>

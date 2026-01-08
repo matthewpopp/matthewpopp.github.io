@@ -1,19 +1,35 @@
 <div class="flex flex-row flex-wrap justify-between mb-8">
-    <H1 class="text-3xl lg:text-6xl">Technical Project Portfolio</H1>
-    <div class="flex flex-row lg:flex-col items-end">
-        <H2 class="text-xl lg:text-4xl">Matthew Popp</H2>
+  <H1 class="text-3xl lg:text-6xl">Technical Project Portfolio</H1>
+  <div class="flex flex-row lg:flex-col items-end">
+    <H2 class="text-xl lg:text-4xl">Matthew Popp</H2>
 
-        <div class="flex flex-row">
-            <p-button text size="small" label="Resume" (click)="resumeVisible.set(true)" styleClass="pb-0 pt-2" icon="pi pi-file" iconPos="right" severity="info"/>
+    <div class="flex flex-row">
+      <p-button
+        text
+        size="small"
+        label="Resume"
+        (click)="resumeVisible.set(true)"
+        styleClass="pb-0 pt-2"
+        icon="pi pi-file"
+        iconPos="right"
+        severity="info"
+      />
 
-            <a href="https://www.linkedin.com/in/matthew-popp/">
-                <p-button text size="small" label="LinkedIn" styleClass="pb-0 pt-2"  iconPos="right" icon="pi pi-linkedin" severity="info"/>
-            </a>
-        </div>
+      <a href="https://www.linkedin.com/in/matthew-popp/">
+        <p-button
+          text
+          size="small"
+          label="LinkedIn"
+          styleClass="pb-0 pt-2"
+          iconPos="right"
+          icon="pi pi-linkedin"
+          severity="info"
+        />
+      </a>
     </div>
+  </div>
 </div>
 
 <p-drawer styleClass="!w-full xl:!w-[80rem]" [(visible)]="resumeVisible" position="right">
-        <app-resume/>
+  <app-resume />
 </p-drawer>
-    

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CardModule } from 'primeng/card';
 import { GalleriaModule, GalleriaResponsiveOptions } from 'primeng/galleria';
-import { ButtonModule } from "primeng/button";
+import { ButtonModule } from 'primeng/button';
 import { AccordionModule } from 'primeng/accordion';
 
 @Component({
@@ -19,25 +19,25 @@ export class ProjectCard {
   bodyTemplate = contentChild<TemplateRef<any>>('body');
 
   images = computed(() => {
-    if (!(this.imageUrls().length)) return [];
+    if (!this.imageUrls().length) return [];
     const urls = this.imageUrls();
 
-    return urls.map(url => ({
+    return urls.map((url) => ({
       itemImageSrc: url,
-      thumbnailImageSrc: url
+      thumbnailImageSrc: url,
     }));
   });
 
   activePanel = signal<any>(null);
 
   responsiveOptions: GalleriaResponsiveOptions[] = [
-        {
-            breakpoint: '1300px',
-            numVisible: 4
-        },
-        {
-            breakpoint: '575px',
-            numVisible: 1
-        }
-    ];
+    {
+      breakpoint: '1300px',
+      numVisible: 4,
+    },
+    {
+      breakpoint: '575px',
+      numVisible: 1,
+    },
+  ];
 }
