@@ -1,6 +1,6 @@
 <p-accordion value="0">
   <p-accordion-panel value="0">
-    <p-accordion-header class="text-3xl!">In Progress</p-accordion-header>
+    <p-accordion-header class="text-3xl">In Progress</p-accordion-header>
     <p-accordion-content>
       <ng-container
         [ngTemplateOutlet]="bookTable"
@@ -10,7 +10,7 @@
   </p-accordion-panel>
 
   <p-accordion-panel value="1">
-    <p-accordion-header class="text-3xl!">Finished</p-accordion-header>
+    <p-accordion-header class="text-3xl">Finished</p-accordion-header>
     <p-accordion-content>
       <ng-container
         [ngTemplateOutlet]="bookTable"
@@ -24,16 +24,17 @@
   <p-table [value]="books">
     <ng-template #body let-book>
       <tr>
-        <td>
+        <td class="pl-0 pr-0">
           <img
-            class="h-80! object-cover block m-auto"
+            class="max-h-80 min-h-20 object-cover block m-auto"
             [src]="book.imageurl"
             alt="{{ book.title }}"
           />
         </td>
-        <td>
-          <div class="text-3xl font-bold">{{ book.title }}</div>
+        <td class="max-w-[80vw] lg:max-w-[30vw]">
+          <div class="text-xl lg:text-3xl font-bold">{{ book.title }}</div>
           <div>{{ book.author }}</div>
+          <div class="mt-2">{{ book.takeaways }}</div>
         </td>
       </tr>
     </ng-template>
