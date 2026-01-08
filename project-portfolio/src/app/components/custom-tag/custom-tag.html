@@ -1,0 +1,6 @@
+@if (isMobile){
+    <p-avatar [image]="icon()" class="mr-2" size="normal" shape="circle" />
+} 
+@else {
+    <p-chip [label]="label()" [image]="icon()" />
+}

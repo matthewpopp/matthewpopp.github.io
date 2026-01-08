@@ -1,17 +1,17 @@
 import { Component, signal } from '@angular/core';
 
 import { CardModule } from 'primeng/card';
-import { ChipModule } from 'primeng/chip';
 import { DrawerModule } from 'primeng/drawer';
 import { ButtonModule } from 'primeng/button';
 
 import { Books } from '..';
 import { ProjectCard } from '..';
 import { icons } from '../../enums';
+import { CustomTag } from '..';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [CardModule, ChipModule, DrawerModule, ButtonModule, Books, ProjectCard],
+  imports: [CardModule, DrawerModule, ButtonModule, Books, ProjectCard, CustomTag],
   templateUrl: './portfolio.html',
 })
 export class Portfolio {

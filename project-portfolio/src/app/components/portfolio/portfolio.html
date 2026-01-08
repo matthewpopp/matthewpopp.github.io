@@ -1,12 +1,12 @@
 <div class="flex flex-col gap-8">
   <div>
     <H2 class="text-3xl lg:text-5xl mb-3">Analytics & Data Projects</H2>
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-6">
       <app-project-card title="MSBA Analytics Challenge" [imageUrls]="projectImages.msbaChallenge">
         <ng-template #tags>
-          <p-chip label="Excel" [image]="icons.excel" />
-          <p-chip label="Python" [image]="icons.python" />
-          <p-chip label="Tableau" [image]="icons.tableau" />
+          <app-custom-tag label="Excel" [icon]="icons.excel" />
+          <app-custom-tag label="Python" [icon]="icons.python" />
+          <app-custom-tag label="Tableau" [icon]="icons.tableau" />
         </ng-template>
 
         <ng-template #body>
@@ -37,7 +37,7 @@
         [imageUrls]="projectImages.energyDashboard"
       >
         <ng-template #tags>
-          <p-chip label="Excel" [image]="icons.excel" />
+          <app-custom-tag label="Excel" [icon]="icons.excel" />
         </ng-template>
 
         <ng-template #body>
@@ -62,9 +62,9 @@
         [imageUrls]="projectImages.msbaImmersions"
       >
         <ng-template #tags>
-          <p-chip label="Excel" [image]="icons.excel" />
-          <p-chip label="Python" [image]="icons.python" />
-          <p-chip label="Tableau" [image]="icons.tableau" />
+          <app-custom-tag label="Excel" [icon]="icons.excel" />
+          <app-custom-tag label="Python" [icon]="icons.python" />
+          <app-custom-tag label="Tableau" [icon]="icons.tableau" />
         </ng-template>
 
         <ng-template #body>
@@ -90,7 +90,7 @@
         [imageUrls]="projectImages.awsPipeline"
       >
         <ng-template #tags>
-          <p-chip label="AWS" [image]="icons.aws" />
+          <app-custom-tag label="AWS" [icon]="icons.aws" />
         </ng-template>
 
         <ng-template #body>
@@ -115,13 +115,13 @@
 
   <div>
     <H2 class="text-3xl lg:text-5xl mb-3">Development Projects</H2>
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-6">
       <app-project-card title="Interactive Warehouse Map" [imageUrls]="projectImages.warehouseMap">
         <ng-template #tags>
-          <p-chip label="Angular" [image]="icons.angular" />
-          <p-chip label="SAP" [image]="icons.sap" />
-          <p-chip label="Python" [image]="icons.python" />
-          <p-chip label="SQL Server" [image]="icons.sqlServer" />
+          <app-custom-tag label="Angular" [icon]="icons.angular" />
+          <app-custom-tag label="SAP" [icon]="icons.sap" />
+          <app-custom-tag label="Python" [icon]="icons.python" />
+          <app-custom-tag label="SQL Server" [icon]="icons.sqlServer" />
         </ng-template>
 
         <ng-template #body>
@@ -151,10 +151,10 @@
 
       <app-project-card title="Online Storefront" [imageUrls]="projectImages.storefront">
         <ng-template #tags>
-          <p-chip label="AWS" [image]="icons.aws" />
-          <p-chip label="mongoDB" [image]="icons.mongodb" />
-          <p-chip label="MySQL" [image]="icons.mysql" />
-          <p-chip label="Angular" [image]="icons.angular" />
+          <app-custom-tag label="AWS" [icon]="icons.aws" />
+          <app-custom-tag label="mongoDB" [icon]="icons.mongodb" />
+          <app-custom-tag label="MySQL" [icon]="icons.mysql" />
+          <app-custom-tag label="Angular" [icon]="icons.angular" />
         </ng-template>
 
         <ng-template #body>
@@ -178,8 +178,8 @@
 
       <app-project-card title="Project Portfolio">
         <ng-template #tags>
-          <p-chip label="Github" [image]="icons.github" />
-          <p-chip label="Angular" [image]="icons.angular" />
+          <app-custom-tag label="Angular" [icon]="icons.angular" />
+          <app-custom-tag label="Github" [icon]="icons.github" />
         </ng-template>
 
         <ng-template #body>
@@ -193,7 +193,7 @@
 
   <div>
     <H2 class="text-3xl lg:text-5xl mb-3">Activities</H2>
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-6">
       <app-project-card title="Books">
         <ng-template #body>
           <p>

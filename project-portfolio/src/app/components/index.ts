@@ -3,3 +3,4 @@ export * from './portfolio/portfolio';
 export * from './header/header';
 export * from './project-card/project-card';
 export * from './resume/resume';
+export * from './custom-tag/custom-tag'
