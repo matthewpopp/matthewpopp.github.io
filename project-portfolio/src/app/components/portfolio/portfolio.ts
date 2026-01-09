@@ -70,6 +70,17 @@ export class Portfolio {
         imageBase + 'woodworking/entertainment.webp',
         imageBase + 'woodworking/bowls.webp',
       ],
+
+      accidentPrediction: [
+        imageBase + 'accident-prediction/data.webp',
+        imageBase + 'accident-prediction/feature-eng.webp',
+        imageBase + 'accident-prediction/goals.webp',
+        imageBase + 'accident-prediction/comparisons.webp',
+        imageBase + 'accident-prediction/parameter-selection.webp',
+        imageBase + 'accident-prediction/key-features.webp',
+        imageBase + 'accident-prediction/action-items.webp',
+        imageBase + 'accident-prediction/opporitunities.webp',
+      ],
     };
   }
 }
